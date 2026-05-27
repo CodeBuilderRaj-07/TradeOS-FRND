@@ -1,6 +1,6 @@
 import type { Trade, TradeCreate, TradeStats, Strategy, Tag, AuthToken } from "./types";
 
-const BASE = "/api";
+const BASE = import.meta.env.VITE_API_URL || "/api";
 let token: string | null = localStorage.getItem("tradeos_token");
 
 export function setToken(t: string | null) {
